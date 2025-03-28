@@ -1,3 +1,5 @@
+print(">>> Iniciando aplicação FastAPI")
+
 from fastapi import FastAPI, Request
 from fastapi.responses import PlainTextResponse
 
@@ -11,6 +13,7 @@ async def receber_mensagem(request: Request):
 
     print(f"Mensagem recebida de {from_number}: {body}")
     return PlainTextResponse("Recebido com sucesso!")
+
 @app.get("/")
 def home():
     return {"status": "online"}
